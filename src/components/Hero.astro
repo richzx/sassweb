@@ -1,0 +1,46 @@
+---
+import logo1 from "/src/images/logo1.svg";
+import heroBg from "/src/images/hero.png";
+
+const logos = [
+  { id: 1, image: logo1 },
+  { id: 1, image: logo1 },
+  { id: 1, image: logo1 },
+  { id: 1, image: logo1 },
+];
+---
+
+<main
+  class="w-full md:[70vh] h-auto border-b border-slate-300 flex flex-col items-center justify-between gap-8 px-5 box-border py-5 md:flex-row md:px-24"
+>
+  <div class="flex flex-col gap-7">
+    <span
+      class="font-bold text-[50px] max-w-[650px] leading-[70px] md:leading-[90px] md:text-[75px]"
+    >
+      Team projects, done well
+    </span>
+    <span class="leading-7 text-gray-600 md:max-[550px]">
+      The only plataform that your team all the tools needed to work together on
+      their awesome projects.
+    </span>
+    <div class="flex items-center gap-3">
+      <input
+        type="text"
+        placeholder="Enter your email"
+        class="rounded-lg border border-slate-300 px-3 h-12 w-full"
+      />
+      <button
+        class="bg-blue-600 text-white rounded-lg px-8 h-12 whitespace-nowrap"
+        >Sign Up For Free</button
+      >
+    </div>
+    <div class="w-full bg-[#F1F5F9] rounded-lg py-5 flex items-center justify-between px-3 ">
+      {logos.map((logo) => {
+        return(
+          <img src={logo.image.src} alt="" />
+        )
+      })}
+    </div>
+  </div>
+  <img class="w-[90%] md:w-[45%] " src={heroBg.src} alt="fondo del hero" />
+</main>

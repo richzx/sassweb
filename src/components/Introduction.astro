@@ -1,0 +1,17 @@
+---
+import intro1 from "/src/images/intro1.png";
+import intro2 from "/src/images/intro2.png";
+import intro3 from "/src/images/intro3.png";
+
+const images = [{ src: intro1 }, { src: intro2 }, { src: intro3 }];
+---
+
+<section class="w-full pt-28 px-5 flex flex-col items-center justify-center gap-10 md:gap-0 md:justify-around md:flex-row md:px-24 md:pt-40 ">
+  <div class="flex items-center gap-4 w-full justify-center md:justify-normal md:w-[30%] ">
+    {images.map((image, index: number) => {
+      return(
+        <img class={`${index === 1 && "mt-[-120px]"} w-[30%] md:w-full `} src={image.src.src} alt="images" />
+      )
+    })}
+  </div>
+</section>
