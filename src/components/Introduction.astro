@@ -6,12 +6,17 @@ import intro3 from "/src/images/intro3.png";
 const images = [{ src: intro1 }, { src: intro2 }, { src: intro3 }];
 ---
 
-<section class="w-full pt-28 px-5 flex flex-col items-center justify-center gap-10 md:gap-0 md:justify-around md:flex-row md:px-24 md:pt-40 ">
-  <div class="flex items-center gap-4 w-full justify-center md:justify-normal md:w-[30%] ">
+<section class="w-full pt-28 px-5 flex flex-col items-center justify-center gap-10 md:justify-around lg:flex-row md:px-12 md:pt-40 lg:px-20 ">
+  <div class="flex items-center gap-4 w-full justify-center md:w-[50%] lg:w-[65%] ">
     {images.map((image, index: number) => {
       return(
         <img class={`${index === 1 && "mt-[-120px]"} w-[30%] md:w-full `} src={image.src.src} alt="images" />
       )
     })}
+  </div>
+  <div class="flex flex-col gap-5" >
+    <span class="font-bold text-[50px] max-w-[700px] leading-[70px] md:leading-[90px] md:text-[75px] ">Enjoy your working time</span>
+    <p class="leading-7 text-gray-600 max-w-[600px] " >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem aperiam magnam dolores dicta natus cumque excepturi sapiente voluptate aliquid laboriosam laudantium, debitis ipsa omnis itaque explicabo repellendus iure officiis nam!</p>
+    <a class="text-blue-600 font-semibold hover:underline" href="/help">See how it helped others</a>
   </div>
 </section>
