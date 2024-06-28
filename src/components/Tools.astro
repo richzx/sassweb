@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import toolsImage from '../images/tools.svg'
+---
+
+<section class="w-full pt-36 md:pt-44 px-5 md:px-24 flex flex-col md:flex-row items-center justify-center md:justify-around gap-10 md:gap-0">
+  <div class="flex flex-col gap-5 w-full md:w-[35%]">
+    <span class="font-bold text-[50px] md:text-[75px] max-w-full leading-[70px] md:leading-[90px] ">
+      Get all the tools your team needs
+    </span>
+    <p class="leading-7 text-gray-600 max-w-[95%] md:max-w-[580px] ">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum expedita corrupti quidem incidunt, voluptates nihil ducimus magni quas ut sapiente neque sequi cumque eveniet officiis sunt fugit cupiditate maxime dolore!
+    </p>
+    <a class="text-blue-600 font-semibold hover:underline" href="/tools">Check the tools</a>
+  </div>
+  <img src={toolsImage.src} alt="Imagen de Tools" class="w-full md:w-[35%] " />
+</section>
