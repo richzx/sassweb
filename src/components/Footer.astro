@@ -1,0 +1,20 @@
+---
+  const links = [
+    { title: "Terms", path: "/terms" },
+    { title: "Privacy", path: "/privacy" },
+    { title: "Support", path: "/support" },
+    { title: "About", path: "/about" },
+    { title: "Contact", path: "/contact" }
+  ];
+---
+
+<footer class="w-full md:h-24 py-5 md:px-52 px-5 flex md:flex-row flex-col items-center justify-between border-t border-slate-300 md:gap-0 gap-5">
+  <span class="font-bold text-lg text-gray-800">Magnifico</span>
+  <div class="flex items-center gap-6">
+    {links.map((link) => (
+      <a href={link.path} class="font-medium text-[15px] text-gray-600" >
+        {link.title}
+      </a>
+    ))}
+  </div>
+</footer>
